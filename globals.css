@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-base: #040d12;
+  --color-bg-surface: #0a1929;
+  --color-bg-card: #0f2137;
+  --color-accent-primary: #00e5ff;
+  --color-accent-secondary: #76ff03;
+  --color-accent-danger: #ff1744;
+  --color-accent-warm: #ff9100;
+  --color-text-primary: #e8f4f8;
+  --color-text-muted: #5a8a9f;
+  --color-border-glow: rgba(0, 229, 255, 0.15);
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #040d12 0%, #0a2540 50%, #001a2e 100%);
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  backdrop-filter: blur(12px);
+  background: rgba(15, 33, 55, 0.7);
+  border: 1px solid var(--color-border-glow);
+}
+
+.glow-shadow {
+  box-shadow: var(--shadow-glow);
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.5);
+  outline: none;
+  border-color: var(--color-accent-primary);
+}
+
+/* Scrollbar tweaks */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-card);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
